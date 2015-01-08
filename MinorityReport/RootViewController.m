@@ -33,12 +33,17 @@
     }
 
     if (sender.state == UIGestureRecognizerStateEnded) {
-        [UIView animateWithDuration:0.5f animations:^{
+        [UIView animateWithDuration:1.5f animations:^{
             self.futureLabel.center = self.originalCenter;
+        } completion:^(BOOL finished) {
+            if (finished) {
+                self.futureLabel.backgroundColor = [UIColor blueColor];
+            }
         }];
     }
-
 }
+
+
 
 
 

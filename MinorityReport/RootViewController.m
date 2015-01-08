@@ -6,14 +6,15 @@
 //  Copyright (c) 2015 Syed Amaanullah. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "RootViewController.h"
 
-@interface ViewController ()
+@interface RootViewController ()
 @property (weak, nonatomic) IBOutlet UILabel *futureLabel;
+@property (weak, nonatomic) IBOutlet UILabel *thePreCogsLabel;
 
 @end
 
-@implementation ViewController
+@implementation RootViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -22,7 +23,13 @@
 - (IBAction)onDrag:(UIPanGestureRecognizer *)sender {
     CGPoint point = [sender locationInView:self.view];
     self.futureLabel.center = point;
-    NSLog(@"%f %f", point.x, point.y);
+
+    if (CGRectContainsPoint(self.thePreCogsLabel.frame, point)) {
+        self.futureLabel.text = @"A fictitious and incriminating future";
+
+        [self.futureLabel sizeToFit];
+    }
+
 }
 
 

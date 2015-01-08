@@ -23,12 +23,13 @@
                                 <fontDescription key="fontDescription" name="Avenir-Roman" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <connections>
-                                    <outletCollection property="gestureRecognizers" destination="QCD-6h-H84" appends="YES" id="Dge-aa-X3y"/>
-                                </connections>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="how-9L-JID" appends="YES" id="I6r-oh-dJP"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Minority Report Control Center" id="TVr-0t-HAr"/>
                     <connections>
@@ -36,9 +37,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <panGestureRecognizer minimumNumberOfTouches="1" id="QCD-6h-H84">
+                <panGestureRecognizer minimumNumberOfTouches="1" id="how-9L-JID">
                     <connections>
-                        <action selector="onDrag:" destination="vXZ-lx-hvc" id="Sg8-z9-xWT"/>
+                        <action selector="onDrag:" destination="vXZ-lx-hvc" id="79t-oJ-B2I"/>
                     </connections>
                 </panGestureRecognizer>
             </objects>

@@ -20,6 +20,9 @@
     self.navigationController.navigationBar.barTintColor = [UIColor blueColor];
 }
 - (IBAction)onDrag:(UIPanGestureRecognizer *)sender {
+    CGPoint point = [sender locationInView:self.view];
+    self.futureLabel.center = point;
+    NSLog(@"%f %f", point.x, point.y);
 }
 
 
